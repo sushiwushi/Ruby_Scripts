@@ -18,4 +18,4 @@ Example: Using resource file in Metasploit
 `cd Metasploit_Scripts/`  
 `cp simple_exploit_multi_handler.rb /usr/share/metasploit-framework/embedded/framework/scripts/resource/`   
 `msfconsole`  
-`resource simple_exploit_multi_handler`  
+`resource simple_exploit_multi_handler.rc`  
