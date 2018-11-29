@@ -10,9 +10,12 @@ You need to copy the resource file (*.rc) into metasploit-framework resource dir
 - Kali Linux default Metasploit location: `/usr/share/`  
 - Ubuntu default installed Metasploit location: `/opt/`  
    
-Example: Adding simple_exploit_multi_handler.rc resource file into Kali Linux  
+Example: Starting Metasploit with resource file  
 `cd Metasploit_Scripts/`  
-`cp simple_exploit_multi_handler.rb /usr/share/metasploit-framework/embedded/framework/scripts/resource/` 
-`msfconsole -r simple_exploit_multi_handler`  
-or if you are already inside Metasploit:  
+`msfconsole -r simple_exploit_multi_handler.rb`  
+  
+Example: Using resource file in Metasploit  
+`cd Metasploit_Scripts/`  
+`cp simple_exploit_multi_handler.rb /usr/share/metasploit-framework/embedded/framework/scripts/resource/`   
+`msfconsole`  
 `resource simple_exploit_multi_handler`  
