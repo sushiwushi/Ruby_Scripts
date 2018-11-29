@@ -7,7 +7,7 @@ Clone this repository:
   
 ### Using resource file in Metasploit:  
 You need to copy the resource file (*.rc) into metasploit-framework resource directory
-- Kali Linux default Metasploit location: `/usr/share`  
+- Kali Linux default Metasploit location: `/usr/share/`  
 - Ubuntu default installed Metasploit location: `/opt/`  
    
 Example: Adding simple_exploit_multi_handler.rc resource file into Kali Linux  
