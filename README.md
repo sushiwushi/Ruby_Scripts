@@ -12,7 +12,7 @@ You need to copy the resource file (*.rc) into metasploit-framework resource dir
    
 Example: Starting Metasploit with resource file  
 `cd Metasploit_Scripts/`  
-`msfconsole -r simple_exploit_multi_handler.rb`  
+`msfconsole -r simple_exploit_multi_handler.rc`  
   
 Example: Using resource file in Metasploit  
 `cd Metasploit_Scripts/`  
