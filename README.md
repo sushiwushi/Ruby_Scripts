@@ -19,11 +19,12 @@ Example: Using resource file inside Metasploit (Kali Linux)
 `msfconsole`  
 `resource exploit_multi_handler.rc`  
 
+  
 ### Using meterpreter scripts in Metasploit:  
 You need to copy the Ruby file (*.rb) into metasploit-framework scripts directory    
 Meterpreter scripts directory: `*/metasploit-framework/embedded/framework/scripts/meterpreter/`  
   
-Example: Adding meterpreter scripts into metasploit-framework (Kali Linux)
+Example: Adding meterpreter scripts into metasploit-framework (Kali Linux)   
 `cd Metasploit_Scripts/`    
 `cp utilman_to_cmd.rb /usr/share/metasploit-framework/embedded/framework/scripts/meterpreter/`  
   
