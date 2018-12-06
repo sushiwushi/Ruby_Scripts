@@ -6,7 +6,7 @@ Clone this repository:
 `cd Metasploit_Scripts/`
   
 ### Using resource file in Metasploit:  
-You need to copy the resource file (*.rc) into metasploit-framework resource directory
+You need to copy the resource file (*.rc) into metasploit-framework resource directory   
 Resource directory: `*/metasploit-framework/embedded/framework/scripts/resource/`  
    
 Example: Starting Metasploit with resource file  
@@ -20,7 +20,7 @@ Example: Using resource file inside Metasploit (Kali Linux)
 `resource exploit_multi_handler.rc`  
 
 ### Using meterpreter scripts in Metasploit:  
-You need to copy the Ruby file (*.rb) into metasploit-framework scripts directory
+You need to copy the Ruby file (*.rb) into metasploit-framework scripts directory    
 Meterpreter scripts directory: `*/metasploit-framework/embedded/framework/scripts/meterpreter/`  
   
 Example: Adding meterpreter scripts into metasploit-framework (Kali Linux)
